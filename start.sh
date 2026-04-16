@@ -1,3 +1,5 @@
-!/bin/bash python manage.py collectstatic --noinput 
-python manage.py migrate --noinput 
-gunicorn resume_creator.wsgi:application --bind 0.0.0.0:$PORT 
+#!/usr/bin/env bash
+
+python manage.py collectstatic --noinput
+python manage.py migrate --noinput
+gunicorn resume_creator.wsgi:application --bind 0.0.0.0:$PORT
